@@ -136,6 +136,7 @@ var oc = new Image(); \n\
 oc.src = "http://support.github.com/discussions/site/2060/assets/1797555535fc6a50869a61fad614199c6b3320d1/octocat_happy_thumb.gif"; \n\
 oc.onload = function() { \n\
   for(var i = 0;i< 400;i++) {\n\
+  c.globalAlpha = Math.random()*1;\n\
  c.drawImage(oc, Math.floor(Math.random()*600+1), Math.floor(Math.random()*300+1)); \n\
  }\n\
 };'}, { 
