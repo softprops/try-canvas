@@ -59,7 +59,7 @@
       <h1>try canvas ｢(ﾟﾍﾟ)&#9997;</h1>
       try <select id="examples"></select>
       <canvas width="600" height="300" id="canvas"></canvas>
-      <strong>C-d</strong> to draw, <strong>C-c</strong> to clear, <strong>C-x</strong> for blank slate
+      <strong>Alt-d</strong> to draw, <strong>Alt-c</strong> to clear, <strong>Alt-x</strong> for blank slate
       <div class="code-canvas drawfn">
          <div class="comment">/** draw on an open canvas</div>
           <div class="comment indent">* @param c the canvas's 2d context */</div>
@@ -211,12 +211,13 @@ for(var i=0; i < 30; i++) { \n\
         };
         
         document.onkeypress = function(e) {
-          if(e.ctrlKey) {
-            if(e.charCode === 4) { /* d */
+          console.log(e);
+          if(e.altKey) {
+            if(e.charCode === 4 || e.charCode === 8706) { /* d */
               onDraw();
-            } else if(e.charCode === 3) { /* c */
+            } else if(e.charCode === 3 || e.charCode === 231) { /* c */
               onClear();
-            } else if(e.charCode === 24) { /* x */
+            } else if(e.charCode === 24 || e.charCode === 8776) { /* x */
               onBlankSlate();
             }
           }
