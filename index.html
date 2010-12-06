@@ -111,12 +111,9 @@ c.moveTo(95,65);\n\
 c.arc(90,65,5,0,Math.PI*2,true);\n\
 c.stroke();'
         }, {
-          name: "bubble",
-          draw:'/*bubble*/ \n\
-var grad = c.createLinearGradient(0, 0, 100, 0);\n\
-grad.addColorStop(0,"black");\n\
-grad.addColorStop(0,"white");\n\
-c.fillStyle=grad;\n\
+          name: "word bubble",
+          draw:'/*word bubble*/ \n\
+c.fillStyle="#79C5FF";\n\
 c.beginPath();\n\
 c.moveTo(75,25);\n\
 c.quadraticCurveTo(25,25,25,62.5);  \n\
@@ -125,11 +122,13 @@ c.quadraticCurveTo(50,120,30,125); \n\
 c.quadraticCurveTo(60,120,65,100); \n\
 c.quadraticCurveTo(125,100,125,62.5); \n\
 c.quadraticCurveTo(125,25,75,25); \n\
+c.closePath();\n\
 c.fill();\n\
-c.stroke();\n\
-c.font = "bold 12px sans-serif";\n\
-c.fillStyle = "#333";\n\
-c.fillText("hi", 65, 70);'
+c.closePath();\n\
+c.font = "bold 18px sans-serif";\n\
+c.fillStyle = "#fff";\n\
+c.fillText("well", 50, 60);\n\
+c.fillText("hello.", 50, 80);'
         }, {
           name: 'octocat',
           draw:'/*octocat */ \n\
